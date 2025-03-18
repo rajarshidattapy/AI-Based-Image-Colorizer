@@ -24,6 +24,7 @@ This project is an AI-powered web app that colorizes black-and-white images usin
 │── /models
 │   │── DeOldify/         # Pre-trained model
 │── app.py               # Flask backend
+│── app.ipynb            #Python code
 │── requirements.txt      # Dependencies
 │── README.md            # Documentation
 ```
