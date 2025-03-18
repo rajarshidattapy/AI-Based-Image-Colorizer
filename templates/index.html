@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Colorizer</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI-Based Image Colorizer</h1>
+            <p>Upload a black-and-white image and see it in color!</p>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <input type="file" id="image-upload" name="file" accept=".jpg, .jpeg, .png">
+                        <label for="image-upload" class="custom-file-upload">
+                            <span class="upload-icon">📷</span>
+                            <span>Choose Image</span>
+                        </label>
+                        <span id="file-name">No file chosen</span>
+                    </div>
+                    
+                    <button type="submit" id="colorize-btn" disabled>Colorize Image</button>
+                </form>
+            </section>
+            
+            <section class="result-section" id="result-container" style="display: none;">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Colorizing image...</p>
+                </div>
+                
+                <div class="image-comparison" id="comparison-container" style="display: none;">
+                    <div class="image-box">
+                        <h3>Original</h3>
+                        <img id="original-image" src="" alt="Original Image">
+                    </div>
+                    <div class="image-box">
+                        <h3>Colorized</h3>
+                        <img id="colorized-image" src="" alt="Colorized Image">
+                    </div>
+                </div>
+                
+                <div class="error-message" id="error-container" style="display: none;">
+                    <p id="error-text"></p>
+                </div>
+                
+                <button id="download-btn" style="display: none;">Download Colorized Image</button>
+                <button id="new-upload-btn">Colorize Another Image</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Powered by <strong>DeOldify</strong> and <strong>Flask</strong></p>
+        </footer>
+    </div>
+    
+    <!-- Link to external JavaScript -->
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
